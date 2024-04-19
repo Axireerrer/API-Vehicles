@@ -45,23 +45,23 @@ Copy code
 
 manager = VehicleManager(base_url=api)
 
-Получить все транспортные средства
+# Получить все транспортные средства
 print(manager.get_vehicles())
 
-Фильтрация транспортных средств по названию
+# Фильтрация транспортных средств по названию
 print(manager.filter_vehicles(params={"name": "Toyota"}))
 
-Добавить новое транспортное средство
+# Добавить новое транспортное средство
 new_vehicle = manager.add_vehicle(name="Toyota", model="Camry", year=2022, color="Black", price=25000, latitude=40.7128, longitude=74.0060) print(new_vehicle)
 
-Обновить существующее транспортное средство
+# Обновить существующее транспортное средство
 updated_vehicle = manager.update_vehicle(vehicle_id=1, price=28000) print(updated_vehicle)
 
-Удалить транспортное средство
+# Удалить транспортное средство
 deleted_vehicle = manager.delete_vehicle(vehicle_id=1) print(deleted_vehicle)
 
-Рассчитать расстояние между двумя транспортными средствами
+# Рассчитать расстояние между двумя транспортными средствами
 distance = manager.get_distance(id1=1, id2=2) print(f"Расстояние: {distance} метров")
 
-Найти ближайшее транспортное средство к указанному
+# Найти ближайшее транспортное средство к указанному
 nearest_vehicle = manager.get_nearest_vehicle(id=1) print(nearest_vehicle)
